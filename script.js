@@ -1,20 +1,25 @@
-const sections = document.querySelectorAll("section")
+const sections = document.querySelectorAll(".fps")
 
 window.addEventListener("scroll", (e) => {
     let scrollHeight = window.pageYOffset
     console.log(scrollHeight)
     let active = ""
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight
-        if(scrollHeight >= (sectionTop- sectionHeight)/5 && section.getAttribute("class") != "first-page"){
-            active = section.getAttribute("class")
-            section.style.visibility = "visible"
+
+    for(let i = 0; i < sections.length; ++i){
+        const sectionTop = sections[i].offsetTop;
+        const sectionHeight = sections[i].clientHeight
+        if(scrollHeight >= (sectionTop- sectionHeight/5)){
+            if(sections[i].getAttribute("class") != "first-page"){
+                active = sections[i].getAttribute("class")
+                sections[i].style.visibility = "visible"
+            }
         }
         else{
-            section.classList.add("not-active")
+            if(sections[i].getAttribute("class") != "first-page"){
+            sections[i].classList.add("not-active")
+            }
         }
-    })
+    }
     console.log(active)
 })
 
