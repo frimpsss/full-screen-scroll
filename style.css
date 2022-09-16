@@ -14,7 +14,17 @@ body{
 body::-webkit-scrollbar {
     display: none;
   }
-section{
+.fps{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    color: #fff;
+    font-size: 30px;
+    z-index: 2;
+    place-items: center;
+    text-transform: capitalize;
+}
+.first-page{
     width: 100%;
     height: 100vh;
     display: grid;
@@ -22,8 +32,11 @@ section{
     font-size: 30px;
     place-items: center;
     text-transform: capitalize;
-}
-.first-page{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-bottom: 100px;
     background-color: #0E1025;
 }
 .second-page{
@@ -35,11 +48,14 @@ section{
 .last-page{
     background-color: #F24162;
 }
-.active{
+.fifth-page{
+    background-color: #262324;
+}
+/* .active{
     position: sticky;
     top: 0;
     left: 0;
-}
+} */
 .not-active{
     position: sticky;
     top: 0;

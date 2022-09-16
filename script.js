@@ -1,11 +1,11 @@
-const sections = document.querySelectorAll("section")
+const sections = document.querySelectorAll(".fps")
 
 window.addEventListener("scroll", (e) => {
     let scrollHeight = window.pageYOffset
     console.log(scrollHeight)
     let active = ""
 
-    for(let i = 1; i < sections.length; ++i){
+    for(let i = 0; i < sections.length; ++i){
         const sectionTop = sections[i].offsetTop;
         const sectionHeight = sections[i].clientHeight
         if(scrollHeight >= (sectionTop- sectionHeight/5)){
