@@ -36,12 +36,11 @@ section{
     background-color: #F24162;
 }
 .active{
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     left: 0;
 }
 .not-active{
-    visibility: hidden;
     position: sticky;
     top: 0;
 }
